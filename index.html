@@ -5,17 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Notizblock</title>
 
-    <script src="./script.js"></script>
-
-    <link rel="stylesheet" href="./styles/standard.css">
     <link rel="stylesheet" href="./style.css">
+    <script src="./script.js"></script>
 </head>
-
 <body onload="renderNotes()">
     <h1>Notizblock</h1>
-    <b></b>
 
-    <div id="content">
+    <div class="input-area">
+        <input id="noteInput" type="text">
+        <button onclick="addNote()">Notiz speichern</button>
     </div>
+
+    <div id="content"></div>
 </body>
 </html>
