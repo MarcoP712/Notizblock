@@ -37,6 +37,7 @@ function render() {
     renderNotes();
     renderArchiv();
     renderTrash();
+    renderCounters();
 }
 
 function renderNotes() {
@@ -64,6 +65,12 @@ function renderTrash() {
     for (let index = 0; index < trashTitles.length; index++) {
         trashContentRef.innerHTML += getTrashTemplate(index);
     }
+}
+
+function renderCounters() {
+    document.getElementById('notes_counter').innerText = notesTitles.length;
+    document.getElementById('archiv_counter').innerText = archiveTitles.length;
+    document.getElementById('trash_counter').innerText = trashTitles.length;
 }
 
 function moveNoteToArchiv(index) {

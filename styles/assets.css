@@ -1,14 +1,27 @@
 .circle_btn {
-    width: 66px;
-    height: 66px;
-    border: none;
+    width: 54px;
+    height: 54px;
+    border: 1px solid rgba(255, 255, 255, 0.12);
     border-radius: 50%;
-    background-color: white;
-    color: rgb(60, 60, 60);
-    font-size: 24px;
+    background: rgba(255, 255, 255, 0.08);
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: 700;
     cursor: pointer;
+    backdrop-filter: blur(8px);
+    transition: transform 180ms ease, background 180ms ease, border-color 180ms ease;
 }
 
 .circle_btn:hover {
-    background-color: rgb(235, 235, 235);
+    transform: translateY(-2px);
+}
+
+.accent_btn:hover {
+    background: linear-gradient(135deg, #3b82f6, #06b6d4);
+    border-color: transparent;
+}
+
+.danger_btn:hover {
+    background: linear-gradient(135deg, #ef4444, #f97316);
+    border-color: transparent;
 }

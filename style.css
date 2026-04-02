@@ -1,56 +1,219 @@
-body {
-    padding-bottom: 40px;
+.page_wrapper {
+    width: min(1400px, calc(100% - 32px));
+    margin: 0 auto;
+    padding: 32px 0 56px 0;
+}
+
+.hero {
+    margin-bottom: 32px;
+    padding: 36px;
+    border-radius: 28px;
+    background: linear-gradient(135deg, rgba(30, 41, 59, 0.82), rgba(15, 23, 42, 0.88));
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 18px 60px rgba(0, 0, 0, 0.32);
+}
+
+.hero_badge {
+    display: inline-flex;
+    margin-bottom: 18px;
+    padding: 8px 14px;
+    border-radius: 999px;
+    background: linear-gradient(135deg, #3b82f6, #06b6d4);
+    color: #ffffff;
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+}
+
+.hero_text {
+    max-width: 760px;
+    font-size: 1.05rem;
+    color: #cbd5e1;
+}
+
+.main_layout {
+    display: grid;
+    grid-template-columns: 360px 1fr;
+    gap: 28px;
+    align-items: start;
 }
 
 .note_form_section {
+    position: sticky;
+    top: 24px;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    gap: 16px;
-    margin-left: 30px;
-    margin-bottom: 40px;
+    gap: 12px;
+    padding: 28px;
+    border-radius: 28px;
+    background: linear-gradient(180deg, rgba(17, 24, 39, 0.94), rgba(15, 23, 42, 0.96));
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 16px 50px rgba(0, 0, 0, 0.28);
+}
+
+.section_topline {
+    margin-bottom: 6px;
+    color: #60a5fa;
+    font-size: 0.9rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
 }
 
 .note_form_section label {
-    display: inline-block;
-    padding: 2px 6px;
-    background-color: rgb(223, 234, 255);
-    color: rgb(68, 82, 108);
-    font-size: 28px;
+    color: #e2e8f0;
+    font-size: 0.95rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.note_form_section input,
+.note_form_section textarea {
+    width: 100%;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 18px;
+    background: rgba(255, 255, 255, 0.05);
+    color: #ffffff;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 180ms ease, box-shadow 180ms ease, background 180ms ease;
 }
 
 .note_form_section input {
-    width: 295px;
-    height: 46px;
-    padding: 8px 10px;
-    border: 2px solid rgb(170, 170, 170);
-    border-radius: 6px;
-    background-color: white;
-    font-size: 22px;
+    height: 54px;
+    padding: 0 16px;
+}
+
+.note_form_section textarea {
+    min-height: 160px;
+    padding: 16px;
+    resize: vertical;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.note_form_section input::placeholder,
+.note_form_section textarea::placeholder {
+    color: #94a3b8;
+}
+
+.note_form_section input:focus,
+.note_form_section textarea:focus {
+    border-color: rgba(59, 130, 246, 0.8);
+    box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.12);
+    background: rgba(255, 255, 255, 0.07);
 }
 
 .note_form_section button {
-    width: 210px;
-    height: 48px;
-    border: 2px solid rgb(157, 157, 157);
-    border-radius: 6px;
-    background-color: rgb(236, 236, 236);
-    color: rgb(68, 82, 108);
-    font-size: 22px;
+    margin-top: 8px;
+    height: 56px;
+    border: none;
+    border-radius: 18px;
+    background: linear-gradient(135deg, #3b82f6, #06b6d4);
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: 700;
     cursor: pointer;
+    transition: transform 180ms ease, box-shadow 180ms ease, filter 180ms ease;
+    box-shadow: 0 14px 30px rgba(59, 130, 246, 0.25);
 }
 
 .note_form_section button:hover {
-    background-color: rgb(226, 226, 226);
+    transform: translateY(-2px);
+    filter: brightness(1.05);
+    box-shadow: 0 18px 34px rgba(59, 130, 246, 0.32);
+}
+
+.notes_board {
+    display: grid;
+    gap: 28px;
 }
 
 .notes_section {
+    padding: 24px;
+    border-radius: 28px;
+    background: linear-gradient(180deg, rgba(17, 24, 39, 0.72), rgba(15, 23, 42, 0.76));
+    border: 1px solid rgba(255, 255, 255, 0.07);
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.22);
+}
+
+.section_header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
     margin-bottom: 18px;
 }
 
-.notes_container {
+.section_counter {
+    min-width: 40px;
+    height: 40px;
+    padding: 0 12px;
+    border-radius: 999px;
     display: flex;
-    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: rgba(59, 130, 246, 0.14);
+    color: #93c5fd;
+    font-weight: 700;
+    font-size: 0.95rem;
+}
+
+.notes_container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
     gap: 20px;
-    align-items: flex-start;
+    align-items: stretch;
+}
+
+@media (max-width: 1100px) {
+    .main_layout {
+        grid-template-columns: 1fr;
+    }
+
+    .note_form_section {
+        position: static;
+    }
+}
+
+@media (max-width: 768px) {
+    .page_wrapper {
+        width: min(100% - 20px, 1400px);
+        padding: 20px 0 36px 0;
+    }
+
+    .hero {
+        padding: 24px;
+        border-radius: 22px;
+    }
+
+    .note_form_section,
+    .notes_section {
+        padding: 18px;
+        border-radius: 22px;
+    }
+
+    .notes_container {
+        grid-template-columns: 1fr;
+    }
+
+    .circle_btn {
+        width: 50px;
+        height: 50px;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        margin-bottom: 12px;
+    }
+
+    .hero_text {
+        font-size: 0.98rem;
+    }
+
+    .note {
+        min-height: 230px;
+    }
 }

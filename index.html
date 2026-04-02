@@ -14,31 +14,54 @@
     <script src="./script.js"></script>
 </head>
 <body onload="init()">
-    <h1>Notizblock</h1>
+    <div class="page_wrapper">
+        <header class="hero">
+            <div class="hero_badge">Smart Notes</div>
+            <h1>Notizblock</h1>
+            <p class="hero_text">
+                Speichere deine Gedanken, verschiebe Notizen ins Archiv oder lösche sie im Trash.
+            </p>
+        </header>
 
-    <section class="note_form_section">
-        <label for="title_input">title:</label>
-        <input id="title_input" type="text">
+        <main class="main_layout">
+            <section class="note_form_section">
+                <div class="section_topline">Neue Notiz</div>
 
-        <label for="content_input">content:</label>
-        <input id="content_input" type="text">
+                <label for="title_input">title</label>
+                <input id="title_input" type="text" placeholder="Titel eingeben">
 
-        <button onclick="addNote()">Notiz speichern</button>
-    </section>
+                <label for="content_input">content</label>
+                <textarea id="content_input" placeholder="Schreibe hier deine Notiz..."></textarea>
 
-    <section class="notes_section">
-        <h2>notes</h2>
-        <div id="notes_content" class="notes_container"></div>
-    </section>
+                <button onclick="addNote()">Notiz speichern</button>
+            </section>
 
-    <section class="notes_section">
-        <h2>archiv</h2>
-        <div id="archiv_content" class="notes_container"></div>
-    </section>
+            <section class="notes_board">
+                <section class="notes_section">
+                    <div class="section_header">
+                        <h2>notes</h2>
+                        <span class="section_counter" id="notes_counter">0</span>
+                    </div>
+                    <div id="notes_content" class="notes_container"></div>
+                </section>
 
-    <section class="notes_section">
-        <h2>trash</h2>
-        <div id="trash_content" class="notes_container"></div>
-    </section>
+                <section class="notes_section">
+                    <div class="section_header">
+                        <h2>archiv</h2>
+                        <span class="section_counter" id="archiv_counter">0</span>
+                    </div>
+                    <div id="archiv_content" class="notes_container"></div>
+                </section>
+
+                <section class="notes_section">
+                    <div class="section_header">
+                        <h2>trash</h2>
+                        <span class="section_counter" id="trash_counter">0</span>
+                    </div>
+                    <div id="trash_content" class="notes_container"></div>
+                </section>
+            </section>
+        </main>
+    </div>
 </body>
 </html>
