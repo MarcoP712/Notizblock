@@ -1,0 +1,14 @@
+.circle_btn {
+    width: 66px;
+    height: 66px;
+    border: none;
+    border-radius: 50%;
+    background-color: white;
+    color: rgb(60, 60, 60);
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.circle_btn:hover {
+    background-color: rgb(235, 235, 235);
+}

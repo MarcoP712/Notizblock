@@ -1,0 +1,19 @@
+.note {
+    position: relative;
+    width: 305px;
+    min-height: 310px;
+    background-color: rgb(43, 43, 45);
+    color: white;
+    border-radius: 18px;
+    padding: 26px 22px 88px 22px;
+}
+
+.note_bottom {
+    position: absolute;
+    left: 14px;
+    right: 14px;
+    bottom: 14px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}

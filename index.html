@@ -4,24 +4,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Notizblock</title>
+
+    <link rel="stylesheet" href="./styles/standard.css">
+    <link rel="stylesheet" href="./styles/assets.css">
+    <link rel="stylesheet" href="./styles/note.css">
     <link rel="stylesheet" href="./style.css">
+
+    <script src="./scripts/templates.js"></script>
     <script src="./script.js"></script>
 </head>
-<body onload="renderNotes()">
+<body onload="init()">
     <h1>Notizblock</h1>
 
-    <div class="input-area">
-        <input id="noteInput" type="text">
-    </div>
+    <section class="note_form_section">
+        <label for="title_input">title:</label>
+        <input id="title_input" type="text">
 
-    <div class="button-area">
+        <label for="content_input">content:</label>
+        <input id="content_input" type="text">
+
         <button onclick="addNote()">Notiz speichern</button>
-    </div>
+    </section>
 
-    <h2>notes</h2>
-    <div id="content"></div>
+    <section class="notes_section">
+        <h2>notes</h2>
+        <div id="notes_content" class="notes_container"></div>
+    </section>
 
-    <h2>trash</h2>
-    <div id="trashContent"></div>
+    <section class="notes_section">
+        <h2>archiv</h2>
+        <div id="archiv_content" class="notes_container"></div>
+    </section>
+
+    <section class="notes_section">
+        <h2>trash</h2>
+        <div id="trash_content" class="notes_container"></div>
+    </section>
 </body>
 </html>
